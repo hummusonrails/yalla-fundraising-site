@@ -28,8 +28,16 @@ export const metadata: Metadata = {
     title: "Yalla Fundraising",
     description:
       "Fundraising counsel for Jewish & Israel-connected nonprofits — raise more, build stronger boards, run campaigns that last.",
+    url: "https://yallafundraising.com",
+    siteName: "Yalla Fundraising",
     type: "website",
     locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yalla Fundraising",
+    description:
+      "Fundraising counsel for Jewish & Israel-connected nonprofits — raise more, build stronger boards, run campaigns that last.",
   },
 };
 
