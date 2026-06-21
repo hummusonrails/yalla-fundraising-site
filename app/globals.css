@@ -1,26 +1,127 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ----------------------------------------------------------------
+   Yalla Fundraising — design tokens
+   Warm editorial palette: ivory paper, deep navy ink, terracotta
+   accent, sage secondary. Deliberately NOT corporate blue.
+----------------------------------------------------------------- */
+@theme {
+  --color-paper: #fbf6ec;
+  --color-paper-2: #f4ebdb;
+  --color-paper-3: #efe3cf;
+  --color-ink: #1c2a37;
+  --color-ink-2: #43525d;
+  --color-ink-3: #6c7780;
+  --color-terracotta: #c4583c;
+  --color-terracotta-deep: #a3422b;
+  --color-sage: #6f7e62;
+  --color-sage-deep: #586549;
+  --color-gold: #c08a3e;
+  --color-cream-line: #e3d6bf;
+
+  --font-display: var(--font-display), ui-serif, Georgia, serif;
+  --font-body: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-soft: 0 1px 2px rgba(28, 42, 55, 0.04),
+    0 14px 40px -22px rgba(28, 42, 55, 0.32);
+  --shadow-lift: 0 2px 4px rgba(28, 42, 55, 0.05),
+    0 26px 60px -26px rgba(28, 42, 55, 0.42);
+
+  --animate-marquee: marquee 38s linear infinite;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----------------------------------------------------------------
+   Base
+----------------------------------------------------------------- */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  /* subtle paper grain + warm radial glow */
+  background-image: radial-gradient(
+    120% 90% at 80% -10%,
+    rgba(196, 88, 60, 0.07),
+    transparent 55%
+  );
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(196, 88, 60, 0.2);
+  color: var(--color-ink);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.012em;
+}
+
+/* ----------------------------------------------------------------
+   Utilities
+----------------------------------------------------------------- */
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Load-in stagger — applied to elements with [data-rise] */
+[data-rise] {
+  opacity: 0;
+  animation: rise 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Scroll reveal driven by the Reveal client component */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-rise],
+  .reveal {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Fine top rule used as section markers */
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
 }
