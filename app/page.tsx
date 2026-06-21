@@ -345,9 +345,11 @@ export default function Home() {
                   <p>
                     I&rsquo;m a nonprofit leader, fundraiser, and educator with
                     more than twenty years strengthening Jewish life, community,
-                    and continuity. Today I serve as VP of Development for an
-                    Israeli nonprofit empowering amputees to rebuild their
-                    independence.
+                    and continuity. I&rsquo;ve led development from the inside —
+                    most recently as VP of Development for an Israeli nonprofit
+                    empowering amputees to rebuild their independence. Today I
+                    counsel Israeli and Jewish nonprofits around the world,
+                    helping them raise the resources their missions depend on.
                   </p>
                   <p>
                     Along the way I earned a PhD at NYU, trained leaders through
