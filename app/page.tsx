@@ -17,10 +17,10 @@ const CREDENTIALS = [
 ];
 
 const STATS = [
-  { value: "$XXM+", label: "Raised for mission-driven organizations" },
+  { value: "$25M+", label: "Raised for mission-driven organizations" },
+  { value: "100+", label: "Organizations served" },
+  { value: "300+", label: "Campaigns guided" },
   { value: "20+", label: "Years leading nonprofit development" },
-  { value: "XX", label: "Boards & teams coached and trained" },
-  { value: "XX", label: "Campaigns & feasibility studies guided" },
 ];
 
 const SERVICES = [
@@ -214,9 +214,6 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
-          <p className="mt-8 text-xs text-ink-3">
-            Placeholder figures — to be replaced with Sharon&rsquo;s actuals.
-          </p>
         </section>
 
         {/* ============================ APPROACH ============================ */}
