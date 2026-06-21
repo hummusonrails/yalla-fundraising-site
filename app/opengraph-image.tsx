@@ -98,7 +98,7 @@ export default async function OgImage() {
               flexDirection: "column",
               fontFamily: display,
               fontWeight: 600,
-              fontSize: "68px",
+              fontSize: "58px",
               lineHeight: 1.04,
               letterSpacing: "-0.02em",
               color: "#1c2a37",
@@ -112,18 +112,35 @@ export default async function OgImage() {
             <div style={{ display: "flex" }}>Run a campaign that lasts.</div>
           </div>
 
-          {/* subline */}
-          <div
-            style={{
-              display: "flex",
-              fontSize: "25px",
-              lineHeight: 1.3,
-              color: "#43525d",
-              maxWidth: "600px",
-            }}
-          >
-            Fundraising counsel for Jewish &amp; Israel-connected nonprofits —
-            from someone who has sat in the development chair.
+          {/* subline + CTA */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "26px" }}>
+            <div
+              style={{
+                display: "flex",
+                fontSize: "25px",
+                lineHeight: 1.3,
+                color: "#43525d",
+                maxWidth: "600px",
+              }}
+            >
+              Fundraising counsel for Jewish &amp; Israel-connected nonprofits.
+            </div>
+            <div
+              style={{
+                display: "flex",
+                alignSelf: "flex-start",
+                alignItems: "center",
+                background: "#c4583c",
+                color: "#fbf6ec",
+                padding: "15px 32px",
+                borderRadius: "999px",
+                fontSize: "25px",
+                fontWeight: 600,
+                fontFamily: display,
+              }}
+            >
+              Book a call&nbsp;&rarr;
+            </div>
           </div>
         </div>
 

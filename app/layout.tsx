@@ -18,12 +18,11 @@ const hanken = Hanken_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL("https://yallafundraising.com"),
   title: {
-    default:
-      "Yalla Fundraising — Fundraising counsel for Jewish & Israel-connected nonprofits",
+    default: "Yalla Fundraising — Jewish Nonprofit Fundraising Counsel",
     template: "%s · Yalla Fundraising",
   },
   description:
-    "Sharon Weiss-Greenberg helps Jewish and Israel-connected nonprofits raise more, build stronger boards, and run campaigns that last — from someone who has sat in the development chair.",
+    "Sharon Weiss-Greenberg helps Jewish & Israel-connected nonprofits raise more, build stronger boards, and run campaigns that last.",
   openGraph: {
     title: "Yalla Fundraising",
     description:
