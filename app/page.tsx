@@ -452,7 +452,7 @@ export default function Home() {
               </p>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
                 <a
-                  href="mailto:hello@yallafundraising.com"
+                  href="mailto:sharon@yallafundraising.com?subject=Booking%20a%20call%20%E2%80%94%20Yalla%20Fundraising&body=Hi%20Sharon%2C%0A%0AI%27d%20like%20to%20set%20up%20a%20call.%0A%0AOrganization%3A%20%0AWhat%20we%27re%20working%20on%3A%20%0ATimeline%3A%20"
                   className="inline-flex items-center gap-2 rounded-full bg-paper px-8 py-4 text-base font-semibold text-ink transition-transform hover:scale-[1.03]"
                 >
                   Book a call →
