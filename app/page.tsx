@@ -464,9 +464,6 @@ export default function Home() {
                   Connect on LinkedIn
                 </a>
               </div>
-              <p className="mt-6 text-sm text-paper/60">
-                {`{PLACEHOLDER — booking link / Calendly and contact email to be wired up}`}
-              </p>
             </Reveal>
           </div>
         </section>
