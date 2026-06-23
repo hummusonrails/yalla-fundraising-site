@@ -458,7 +458,9 @@ export default function Home() {
                   Book a call →
                 </a>
                 <a
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/in/sharonweissgreenberg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-paper/40 px-8 py-4 text-base font-semibold text-paper transition-colors hover:border-paper"
                 >
                   Connect on LinkedIn
